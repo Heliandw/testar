@@ -87,7 +87,6 @@ align-items: center;
 #usuario {
 padding: 5px;
 border-bottom: 2px solid #333;
-    margin-left: 50px;
     transform: translateY(70px);
     margin-bottom: 30px;
     z-index: 4414;
@@ -99,13 +98,14 @@ border-bottom: 2px solid #333;
 
 
 #wrapper {
+    display: flex;
+justify-content: center;
     position: relative;
-    width: 100%px;
-    transform: translate(-15px, -100px);
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 #entrar {
-    position: absolute;
     border: none;
 border-radius: 30px;
 padding: 10px;
@@ -141,13 +141,13 @@ label {
     background-color: #F5BA5B;
     padding: 0 5px;
     position: absolute;
-    left: 40px;
 top: 75px;
     pointer-events: none;
 transition: .2s;
 color: white;
 white-space: nowrap;
 font-size: small;
+
 }
 
 #erro {

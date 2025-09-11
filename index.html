@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<div id="container">
+
+
+<form action="">
+
+
+<div id="wrapper">
+    <input type="text" id="usuario" required placeholder=" ">
+    <label for="usuario" >Coloque seu nome</label>
+</div>
+
+
+
+
+</form>
+
+<button id="entrar">Entrar</button>
+</div>
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: Poppins
+}
+
+
+body {
+    background-color: #F56B5B;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes identifier {
+    
+from {
+
+transform: translateX(-800px);
+
+}
+
+to {
+    transform: translateX(0px);
+}
+
+}
+
+
+#usuario {
+    font-family: Poppins;
+    color: white;
+}
+
+form {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F5BA5B;
+   height: 350px;
+width: 300px;
+   border-radius: 50px;
+   padding: 20px;
+
+align-items: center;
+}
+
+#usuario {
+padding: 5px;
+border-bottom: 2px solid #333;
+    margin-left: 50px;
+    transform: translateY(70px);
+    margin-bottom: 30px;
+    z-index: 4414;
+    border: none;
+    border-bottom: #333 solid;
+    background-color: transparent;
+    font-family: Poppins;
+}
+
+
+#wrapper {
+    position: relative;
+    width: 100%px;
+    transform: translate(-15px, -100px);
+}
+
+#entrar {
+    position: absolute;
+    border: none;
+border-radius: 30px;
+padding: 10px;
+width: 100px;
+height: 45px;
+transition:  transition, .3s ease;
+margin-top: 215px;
+background-color: #F5C1AC;
+}
+
+#usuario:focus {
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: #333 solid;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    animation-name: identifier;
+animation-duration: 1s;
+}
+
+#entrar:hover {
+transform: scale(1.2);
+}
+
+label {
+    font-family: Poppins;
+    background-color: #F5BA5B;
+    padding: 0 5px;
+    position: absolute;
+    left: 50px;
+top: 75px;
+    pointer-events: none;
+transition: .2s;
+color: white;
+}
+
+
+#usuario:focus + label,
+#usuario:active + label,
+#usuario:not(:placeholder-shown) + label
+{
+
+transform: translateY(-20px);
+font-size: small;
+
+}
+
+@media (max-width: 340px ) {
+
+
+    form {
+width: 250px;
+    }
+    
+}
+
+</style>
+
+<script>
+
+const input = document.getElementById("usuario")
+const btn = document.getElementById("entrar")
+const nomes = ["samuel", "aquiles", "guilherme", "diogo",]
+
+btn.addEventListener("click", checar)
+
+function checar() {
+
+
+
+let nome = input.value.toLowerCase()
+
+if (nomes.includes(nome)) {
+window.open("main.html")
+}
+
+}
+
+</script>
+
+
+
+
+
+
+
+

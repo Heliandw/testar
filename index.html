@@ -14,20 +14,19 @@
 <div id="container">
 
 
-<form action="">
+<form action="" id="formulario">
 
 
 <div id="wrapper">
     <input type="text" id="usuario" required placeholder=" ">
-    <label for="usuario" >Coloque seu nome</label>
+    <label for="usuario" >Coloque seu primeiro nome</label>
 </div>
 
 
 
-
-</form>
-
+<p id="erro">Seu nome não está na lista</p>
 <button id="entrar">Entrar</button>
+</form>
 </div>
 
 <style>
@@ -113,7 +112,7 @@ padding: 10px;
 width: 100px;
 height: 45px;
 transition:  transition, .3s ease;
-margin-top: 215px;
+margin-top:80px ;
 background-color: #F5C1AC;
 }
 
@@ -127,8 +126,9 @@ background-color: #F5C1AC;
 #container {
     display: flex;
     justify-content: center;
+    align-items: center;
     animation-name: identifier;
-animation-duration: 1s;
+animation-duration: .3s;
 }
 
 #entrar:hover {
@@ -140,13 +140,21 @@ label {
     background-color: #F5BA5B;
     padding: 0 5px;
     position: absolute;
-    left: 50px;
+    left: 40px;
 top: 75px;
     pointer-events: none;
 transition: .2s;
 color: white;
+white-space: nowrap;
+font-size: small;
 }
 
+#erro {
+    font-size: medium;
+    position: absolute;
+    color: red;
+    display: none;
+}
 
 #usuario:focus + label,
 #usuario:active + label,
@@ -172,19 +180,22 @@ width: 250px;
 <script>
 
 const input = document.getElementById("usuario")
-const btn = document.getElementById("entrar")
 const nomes = ["samuel", "aquiles", "guilherme", "diogo",]
+const form = document.getElementById("formulario")
 
-btn.addEventListener("click", checar)
+form.addEventListener("submit", checar)
 
 function checar() {
 
 
-
-let nome = input.value.toLowerCase()
+let nome = input.value.toLowerCase().trim()
 
 if (nomes.includes(nome)) {
-window.open("main.html")
+    window.open("main.html")
+}
+else {
+event.preventDefault()
+document.getElementById("erro").style.display = "block"
 }
 
 }

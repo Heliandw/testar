@@ -1,1 +1,114 @@
-é mano, o codigo ta funcionando cara
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+
+<div id="container">
+    <div id="numeros">
+        <div id="numero1"></div>
+        +
+        <div id="numero2"></div>
+    </div>
+    
+
+    <br>
+    <input type="number" placeholder="resultado" id="InputDoUsuario">
+<p id="paragrafo">Resposta incorreta</p>
+
+        <button id="btn">Checar</button>
+
+        <span id="pontos">0</span>
+</div>
+
+</body>
+</html>
+
+
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: Poppins
+}
+
+
+#btn {
+margin-top: 20px;
+    border: none;
+    width: 100px;
+    height: 25px;
+    border-radius: 40px;
+    transform: scale(1);
+    transition:  transform .2s ease;
+}
+
+#InputDoUsuario::placeholder {
+
+text-align: center;
+
+}
+
+
+#InputDoUsuario:focus {
+
+
+border: none;
+outline: none;
+
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
+
+#InputDoUsuario {
+    padding: 0 12px;
+    border: none;
+    outline: none;
+}
+
+#container {
+   display: flex;
+   flex-direction: column;
+   background-color: #4C89D9;
+   padding: 40px;
+   border-radius: 40px;
+   height: 200px;
+   width: 200px;
+justify-content: center;
+align-items: center;
+}
+
+#numeros {
+    display: flex;
+}
+
+
+body {
+    background-color: #4CD9A0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    display: none;
+    color: red;
+}
+</style>
+
+
+ <script src="pontosebugs.js"></script>
